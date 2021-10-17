@@ -52,7 +52,6 @@ label {
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: #fff;
 }
 .slider__slide_1 {
     background: url(img/meme-1.jpg) no-repeat;
@@ -129,7 +128,7 @@ label {
     width: 16px;
     height: 16px;
     border-radius:100%;
-    background: #ccc;
+    background: rgb(138, 138, 138);
     margin: 0 10px;
 }
 #slide1:checked ~ .slider__footer .slider__bullets label:nth-child(1),
