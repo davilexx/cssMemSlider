@@ -2,7 +2,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: #000;
-    margin: 0;
 }
 .slider {
     width: 603px;
@@ -101,6 +100,11 @@ label {
 .slider__desc-wrapper {
     width: 79px;
     overflow: hidden;
+}
+@media screen and (max-width: 425px) {
+    .slider__desc-wrapper {
+        transform: translateX(-300%);
+    }
 }
 .slider__desc {
     display: flex;
