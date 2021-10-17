@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #000;
+}
+.slider {
+    width: 700px;
+    height: 700px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+.slider__input {
+    display: none;
+}
+label {
+    cursor: pointer;
+    text-decoration: none;
+}
+.slider__carousel {
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 15px;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+.slider__overflow {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#slide1:checked ~ .slider__carousel .slider__inner {
+    margin-left: 0;
+}
+#slide2:checked ~ .slider__carousel .slider__inner {
+    margin-left: -100%;
+}
+#slide3:checked ~ .slider__carousel .slider__inner {
+    margin-left: -200%;
+}
+#slide4:checked ~ .slider__carousel .slider__inner {
+    margin-left: -300%;
+}
+#slide1:checked ~ .slider__desc {
+    margin-left: 0;
+}
+#slide2:checked ~ .slider__desc {
+    margin-left: -100%;
+}
+#slide3:checked ~ .slider__desc {
+    margin-left: -200%;
+}
+#slide4:checked ~ .slider__desc {
+    margin-left: -300%;
+}
+.slider__inner {
+    transition: 0.3s all;
+    width: 400%;
+    line-height: 0;
+    height: 600px;
+}
+.slider__slide {
+    width: 25%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+}
+.slider__slide_1 {
+    background: url(img/meme-1.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.slider__slide_2 {
+    background: url(img/meme-2.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.slider__slide_3 {
+    background: url(img/meme-3.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.slider__slide_4 {
+    background: url(img/meme-4.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.slider__bullets {
+    text-align: right;
+ }
+.slider__bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+}
+#slide1:checked ~ .slider__bullets label:nth-child(1),
+#slide2:checked ~ .slider__bullets label:nth-child(2),
+#slide3:checked ~ .slider__bullets label:nth-child(3),
+#slide4:checked ~ .slider__bullets label:nth-child(4) {
+    background: rgb(50, 0, 131);
+}
+#slide1 ~ .slider__bullets label:nth-child(1):hover,
+#slide2 ~ .slider__bullets label:nth-child(2):hover,
+#slide3 ~ .slider__bullets label:nth-child(3):hover,
+#slide4 ~ .slider__bullets label:nth-child(4):hover {
+    background: rgb(98, 0, 255);
+}
